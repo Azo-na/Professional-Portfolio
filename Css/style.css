@@ -1,0 +1,196 @@
+:root {
+    --outer-space: #33393f;
+    --bright-turquoise: #2aefcb;
+    --gin: #e0eae4;
+    --heliotrope: #e866ec;
+  }
+  
+  /* set content highlight color and background */
+  ::selection {
+    background-color: var(--bright-turquoise);
+    color: var(--outer-space);
+  }
+  
+  html {
+    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+  }
+  
+  body {
+    /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  
+    /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--gin);
+    background-color: var(--outer-space);
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.625rem;
+    color: var(--heliotrope);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    /* 4rem = 40px (4 * 10px) */
+    font-size: 4rem;
+    color: var(--outer-space);
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+    margin: 1% 0;
+  }
+  
+  h3 {
+    font-size: 3rem;
+  }
+  
+  h4 {
+    font-size: 2.5rem;
+  }
+  
+  h5 {
+    font-size: 2rem;
+  }
+  
+  h6 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  code {
+    /* Monospace font stack is used for our code blocks to make it look more like code */
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+      'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+      'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+      monospace;
+  }
+  
+  header {
+    display: flex;
+    padding: 1.5rem;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: var(--heliotrope);
+    background-color: var(--heliotrope);
+  }
+
+  nav li{
+      display: inline;
+      padding: 1.5rem;
+      font-size: 2.4rem;
+      line-height: 2;
+  }
+
+  nav a{
+      text-decoration: underline;
+      color: var(--outer-space);
+  }
+
+  nav a:hover {
+    color: var(--bright-turquoise);
+  }
+
+  header h1.page-title {
+    font-size: 4.5rem;
+    margin: 0 2%;
+  }
+  
+  main {
+    width: 96%;
+    margin: 2rem auto;
+  }  
+  
+  .about-me{
+    border-left: 6px solid var(--heliotrope);
+    padding: 1rem;
+    margin: 0 5%;
+    height: 200px;
+  }
+  
+  .work{
+    border-left: 6px solid var(--heliotrope);
+    padding: 1rem;
+    margin: 3% 5%;
+    height: 2000px;
+  }
+
+  .contact{
+    border-left: 6px solid var(--heliotrope);
+    padding: 1rem;
+    margin: 3% 5%;
+    height: 200px;
+  }
+
+  /* on <pre> click, select all contents so the code is highlighted */
+  .code-card pre:active {
+    user-select: all;
+  }
+  
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+  @media screen and (min-width: 768px) {
+  
+    /* select the first flex box min width*/
+    .firstProject{
+      min-width: 200px;
+    }
+  }
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 100%;
+    }
+
+    .firstProject{
+      min-width: 1100px;
+    }
+  }
+
+  .products {
+    flex: 4;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  /* Added rotation, box-shadow, border-radius */
+  .card {
+    color: black;
+    padding: 10px;
+    flex: 1 0 600px;
+    margin: 15px;
+  }
+  
+  /* Added border-radius to match the card */
+  .card header {
+    border-radius: 50px 50px 0px 0px;
+    padding: 20px;
+  }
+  
+  .card p {
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
